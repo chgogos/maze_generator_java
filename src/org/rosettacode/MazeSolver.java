@@ -125,7 +125,8 @@ public class MazeSolver {
 		// InputStream f = (args.length > 0
 		// ? new FileInputStream (args[0])
 		// : System.in);
-		InputStream f = new FileInputStream("maze1.txt");
+//		InputStream f = new FileInputStream("maze1.txt");
+		InputStream f = new FileInputStream("maze2.txt");
 
 		String[] lines = readLines(f);
 		char[][] maze = decimateHorizontally(lines);

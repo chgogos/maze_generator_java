@@ -6,7 +6,7 @@ import java.awt.geom.Path2D;
 import java.util.*;
 import javax.swing.*;
 
-public class MazeGenerator extends JPanel {
+public class MazeGUIGenerator extends JPanel {
 	enum Dir {
 		N(1, 0, -1), S(2, 0, 1), E(4, 1, 0), W(8, -1, 0);
 		final int bit;
@@ -36,7 +36,7 @@ public class MazeGenerator extends JPanel {
 	final int[][] maze;
 	LinkedList<Integer> solution;
 
-	public MazeGenerator(int size) {
+	public MazeGUIGenerator(int size) {
 		setPreferredSize(new Dimension(650, 650));
 		setBackground(Color.white);
 		nCols = size;
@@ -174,7 +174,7 @@ public class MazeGenerator extends JPanel {
 			f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			f.setTitle("Maze Generator");
 			f.setResizable(false);
-			f.add(new MazeGenerator(24), BorderLayout.CENTER);
+			f.add(new MazeGUIGenerator(24), BorderLayout.CENTER);
 			f.pack();
 			f.setLocationRelativeTo(null);
 			f.setVisible(true);
